@@ -8,7 +8,7 @@ public class twoDigitCalculator {
 
         //USER INPUTS FIRST VALID NUMBER FROM KEYBOARD
         System.out.print("Enter the first digit (0-99): ");
-        int firstDigit = getValidDigitInput(scanner);
+        double firstDigit = getValidDigitInput(scanner);
 
         //USER INPUTS A VALID OPERATOR FROM KEYBOARD
         System.out.print("Enter the operation (+, -, *, /): ");
@@ -16,10 +16,10 @@ public class twoDigitCalculator {
 
         //USER INPUTS SECOND VALID NUMBER FROM KEYBOARD
         System.out.print("Enter the second digit (0-99): ");
-        int secondDigit = getValidDigitInput(scanner);
+        double secondDigit = getValidDigitInput(scanner);
 
         //DISPLAY RESULT
-        int result = performOperation(firstDigit, secondDigit, operation);
+        double result = performOperation(firstDigit, secondDigit, operation);
 
         System.out.println("Result: " + result);
 
@@ -63,7 +63,7 @@ public class twoDigitCalculator {
 
 
     //ARITHMETRIC OPERATION METHOD
-    private static int performOperation(int a, int b, char operation) {
+    private static double performOperation(double a, double b, char operation) {
         switch (operation) {
             case '+':
                 return a + b;
